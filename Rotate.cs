@@ -4,11 +4,26 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour {
 
-	// Use this for initialization
-	public float speed = 10f;
-    
+	
+	[SerializeField] float speed = 10f;
+    [SerializeField] bool xAxis = false;
+    [SerializeField] bool yAxis = false;
+    [SerializeField] bool zAxis = false;
+
     void Update ()
     {
-        transform.Rotate(Vector3.up, speed * Time.deltaTime);
+        if (xAxis)
+        {
+            transform.Rotate(Vector3.right, speed * Time.deltaTime);
+        }
+        
+        if (yAxis)
+        {
+             transform.Rotate(Vector3.up, speed * Time.deltaTime);
+        }
+        if (zAxis)
+        {
+            transform.Rotate(Vector3.forward, speed * Time.deltaTime);
+        }
     }
 }
