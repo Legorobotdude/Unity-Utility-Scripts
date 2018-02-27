@@ -5,15 +5,11 @@ using UnityEngine;
 [DisallowMultipleComponent]
 public class Oscillator : MonoBehaviour {
 
-    [SerializeField] Vector3 movementVector;
+    [SerializeField] Vector3 movementVector;//Vector to move along
+    [SerializeField] float period;//Period of oscilliation
 
-   float movementFactor;//0 for not moved, 1 for fully moved
-
-    [SerializeField] float period;
-
-    Vector3 startingPos;
-    
-
+    Vector3 startingPos;//Store starting position
+    float movementFactor;//0 for not moved, 1 for fully moved
 
     // Use this for initialization
     void Start ()
