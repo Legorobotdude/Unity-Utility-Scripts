@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class triggerEvent : MonoBehaviour {
+public class CollisionEvent : MonoBehaviour {
 
 
 		
@@ -13,10 +13,10 @@ public class triggerEvent : MonoBehaviour {
 
 	
 	
-	void OnTriggerEnter(Collider collision)
+	void OnCollisionEnter(collision collision)
     {
 		
-		if (collision.tag == tagToInteract && flag == false)
+		if (collision.gameObject.tag == tagToInteract && flag == false)
 		{
             flag = true;
             for (int i = 0; i < objectsToDeactivate.Length; i++)
