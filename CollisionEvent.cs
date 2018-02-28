@@ -5,17 +5,17 @@ using UnityEngine;
 public class CollisionEvent : MonoBehaviour {
 
 
-		
+
     [SerializeField] GameObject[] objectsToDeactivate;
     [SerializeField] GameObject[] objectsToActivate;
     [SerializeField] string tagToInteract;
     bool flag = false;
 
-	
-	
-	void OnCollisionEnter(collision collision)
+
+
+	void OnCollisionEnter(Collision collision)
     {
-		
+
 		if (collision.gameObject.tag == tagToInteract && flag == false)
 		{
             flag = true;
@@ -24,12 +24,12 @@ public class CollisionEvent : MonoBehaviour {
             {
                 objectsToDeactivate[i].SetActive(false);
             }
-            
+
             for (int i = 0; i < objectsToActivate.Length; i++)
             {
                 objectsToActivate[i].SetActive(true);
             }
-           
+
 		}
 	}
 
