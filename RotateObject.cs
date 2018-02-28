@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Rotate : MonoBehaviour {
+public class RotateObject : MonoBehaviour {
 
-	
+
     [SerializeField] float speed = 10f;
     [SerializeField] bool xAxis = false;
     [SerializeField] bool yAxis = false;
@@ -16,7 +16,7 @@ public class Rotate : MonoBehaviour {
         {
             transform.Rotate(Vector3.right, speed * Time.deltaTime);
         }
-        
+
         if (yAxis)
         {
              transform.Rotate(Vector3.up, speed * Time.deltaTime);
