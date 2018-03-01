@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RotateObject : MonoBehaviour {
 
+//To do: Replace with x speed, y speed, z speed
 
     [SerializeField] float speed = 10f;
     [SerializeField] bool xAxis = false;
